@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 
 require('./routes')(app);
 
-var server = app.listen(process.env.PORT, function () {
+var server = app.listen(process.env.PORT, process.env.IP, function () {
   var host = server.address().address;
   var port = server.address().port;
   
