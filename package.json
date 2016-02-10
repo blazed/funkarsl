@@ -1,0 +1,29 @@
+{
+  "name": "funkarsl",
+  "version": "1.0.0",
+  "description": "An app showing the state of Stockholms Commuter Service",
+  "main": "server.js",
+  "scripts": {
+    "serve": "node server.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristofferostlund/funkarsl.git"
+  },
+  "keywords": [
+    "SL"
+  ],
+  "author": "Kristoffer Ostlund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristofferostlund/funkarsl/issues"
+  },
+  "homepage": "https://github.com/kristofferostlund/funkarsl#readme",
+  "dependencies": {
+    "body-parser": "1.14.2",
+    "express": "4.13.4",
+    "lodash": "4.3.0",
+    "node-env-file": "0.1.8"
+  }
+}
