@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>funkarsl.lol</title>
-  <link rel="stylesheet" href="style/main.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  <script>
-  (function(r,o,f,l,m,a,O){r['GoogleAnalyticsObject']=m;r[m]=r[m]||function(){
+  <!--<script>
+    (function(r,o,f,l,m,a,O){r['GoogleAnalyticsObject']=m;r[m]=r[m]||function(){
   (r[m].q=r[m].q||[]).push(arguments)},r[m].l=1*new Date();a=o.createElement(f),
   O=o.getElementsByTagName(f)[0];a.async=1;a.src=l;O.parentNode.insertBefore(a,O)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -14,9 +14,15 @@
   ga('create', 'UA-73694491-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+  </script>-->
 </head>
+
 <body>
-  <div class="big-centered">Nej</div>
+  <div id="app">
+    <status-bar :status-arr="statusArr"></status-bar>
+    <status :status="status"></status>
+  </div>
+  <script src="dist/bundle.js"></script>
 </body>
+
 </html>

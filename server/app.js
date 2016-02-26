@@ -1,20 +1,22 @@
 'use strict'
 
-var express = require('express');
-var bodyParser = require('body-parser');
+import express from 'express';
+import * as bodyParser from 'body-parser';
 
-var app = express();
+const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-require('./routes')(app);
 
-var server = app.listen(process.env.PORT, process.env.IP, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+import routes from './routes';
+routes(app);
+
+const server = app.listen(process.env.PORT, process.env.IP, () => {
+  let host = server.address().address;
+  let port = server.address().port;
   
   console.log('App listening on %s on port %s', host, port);
-})
+});

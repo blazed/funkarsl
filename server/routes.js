@@ -1,13 +1,14 @@
 'use strict'
 
-var express = require('express');
-var path = require('path');
+import express from 'express';
+import path from 'path';
 
-var root = path.resolve();
+const root = path.resolve();
 
-module.exports = function (app) {
+export default (app) => {
   // Front end stuff
   app.use(express.static(root + '/public'));
   
   // Back end stuff
-}
+  app.use('/api/status', require('./api/status').default);
+};

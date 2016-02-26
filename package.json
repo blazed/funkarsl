@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "serve": "node server.js",
-    "test": "test"
+    "build:server": "babel server --out-dir .server",
+    "build:frontend": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,30 @@
   },
   "homepage": "https://github.com/kristofferostlund/funkarsl#readme",
   "dependencies": {
+    "bluebird": "^3.3.3",
     "body-parser": "1.14.2",
+    "chalk": "^1.1.1",
     "express": "4.13.4",
-    "lodash": "4.3.0",
-    "node-env-file": "0.1.8"
+    "lodash": "^4.3.0",
+    "node-env-file": "0.1.8",
+    "request": "^2.69.0",
+    "vue": "^1.0.16"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "node-sass": "^3.4.2",
+    "onchange": "^2.0.0",
+    "parallelshell": "^2.0.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.1.2",
+    "shelljs": "^0.6.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13",
+    "webpack-livereload-plugin": "^0.5.3"
   }
 }
