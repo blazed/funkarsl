@@ -8,7 +8,7 @@ import config from '../../config';
 
 /**
  * Returns a sarcastic status for *item*.
- * 
+ *
  * @param {Object} item
  * @return {String}
  */
@@ -25,7 +25,7 @@ function getStatusOfItem(item) {
  * ROUTE GET '/api/status'
  */
 export const get = (req, res) => {
-  
+
   utils.get(config.trafficUrl.replace('{key}', config.trafficKey))
   .then((data) => {
     // Handle the response somewhat
@@ -42,13 +42,13 @@ export const get = (req, res) => {
         status: getStatusOfItem(item)
       }))
       .value();
-    
+
     res.status(200).json(trafficData);
   })
   .catch((err) => {
-    utils.handleError(err, res);
+    utils.handleError(res, err);
   })
-  
+
 };
 
 export default {

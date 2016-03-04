@@ -7,6 +7,8 @@ import Vue from 'vue';
 import Status from './components/status/status';
 import StatusBar from './components/status-bar/status-bar';
 
+import utils from './utils';
+
 const app = new Vue({
   el: '#app',
   components: {
@@ -24,6 +26,17 @@ const app = new Vue({
         type: 'Pendeltåg',
         val: 'Något annat'
       }
-    ]
+    ],
+    created: () => {
+      console.log('Component created.');
+    }
   }
+});
+
+utils.get('/api/status')
+.then((res) => {
+  console.log(res);
+})
+.catch((err) => {
+  console.log(err);
 });
