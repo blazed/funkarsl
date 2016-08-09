@@ -1,7 +1,14 @@
-body, html {
+* {
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+}
+
+body, html, #app {
   color: #404040;
   background-color: #fafafa;
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .big-centered {
